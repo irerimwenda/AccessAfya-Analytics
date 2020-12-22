@@ -1,0 +1,68 @@
+.navbar {
+    background-color: $color-white;
+    display: flex;
+    flex-direction: row;
+    padding: .8rem 3rem;
+
+    &__add-assesment {
+        margin-right: auto;
+        
+        .add-assessment-btn {
+            font-size: 1.2rem;
+            padding: .8rem;
+            border: 1px solid $grey-light-2;
+        }
+    }
+
+    &__notify-bar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .patients-count {
+            width: 15rem;
+            margin-right: 4rem;
+
+            .progress {
+                height: .5rem;
+                margin-bottom: .5rem;
+
+                .progress-bar {
+                    border-radius: 2rem;
+                }
+            }
+
+            .count {
+                margin: 0;
+                color: $grey-dark-2;
+            }
+        }
+
+        .user-profile {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .profile-information {
+                margin-right: 1.6rem;
+
+                .title {
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    margin: 0;
+                }
+
+                .email {
+                    display: block;
+                    color: $grey-dark-1;
+                }
+            }
+
+            .profile-picture {
+                height: 5rem;
+                width: 5rem;
+                border-radius: 50%;
+            }
+        }
+    }
+}
