@@ -1,0 +1,29 @@
+.sidebar {
+    background-color: $color-white;
+    width: 4rem;
+    padding: 4rem;
+    height: inherit;
+    border-right: 1px solid $grey-light-2;
+
+    &__link-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: inherit;
+        height: 100%;
+        list-style: none;
+
+        .link-item {
+
+            &:not(:last-child) {
+                margin-bottom: 3rem;
+            }
+
+            .link {
+                color: $grey-dark-2;
+                font-size: 2.4rem;
+            }
+        }
+    }
+}
