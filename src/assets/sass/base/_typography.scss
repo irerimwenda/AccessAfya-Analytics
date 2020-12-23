@@ -4,3 +4,20 @@ body {
     line-height: 1.7;
     color: $color-black;
 }
+
+.card-title {
+    font-size: 1.125rem;
+    color: $grey-dark-2;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.table-text-primary {
+    display: block;
+    color: $color-black;
+}
+
+.table-text-secondary {
+    display: block;
+    color: $grey-dark-2;
+}

@@ -1,0 +1,33 @@
+.analytics-table {
+   font-size: 1.4rem;
+
+   thead {
+    border-bottom: 2px solid $grey-light-2;
+   }
+
+   .table-index {
+       color: $grey-dark-2;
+   }
+
+   .table-title {
+       color: $blue-3;
+   }
+
+   .issue-progress {
+       display: grid;
+       grid-template-columns: max-content auto;
+       align-items: center;
+
+       .progress {
+           height: .4rem;
+       }
+   }
+
+   .rank-up {
+       color: green;
+   }
+
+   .rank-down {
+       color: red;
+   }
+}

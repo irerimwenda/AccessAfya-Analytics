@@ -4,6 +4,40 @@
 }
 
 .main-wrapper {
-    height: 100vh;
+    height: 100%;
     width: 100%;
+
+    .main-section {
+        padding: 4rem;
+
+        &__title {
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+        }
+
+        &__grid-layout {
+            display: grid;
+            grid-template-columns: 25% 75%;
+            column-gap: 2rem;
+
+            .visits-section {
+
+            }
+
+            .breakdown-section {
+
+                .key-issues-card-btns {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    gap: 10px;
+                }
+
+                .period-card-btns {
+                    display: flex;
+                    flex-direction: row; 
+                }
+            }
+        }
+    }
 }
