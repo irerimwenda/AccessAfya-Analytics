@@ -13,19 +13,19 @@ class Sidebar extends Component {
 
                     <li className="link-item">
                         <NavLink className="link" to='#'>
-                            <i class="fas fa-wave-square"></i>
+                            <i className="fas fa-wave-square"></i>
                         </NavLink>
                     </li>
 
                     <li className="link-item">
                         <NavLink className="link" to='#'>
-                            <i class="far fa-comment-alt"></i>
+                            <i className="far fa-comment-alt"></i>
                         </NavLink>
                     </li>
 
                     <li className="link-item">
                         <NavLink className="link" to='#'>
-                            <i class="fas fa-headphones-alt"></i>
+                            <i className="fas fa-headphones-alt"></i>
                         </NavLink>
                     </li>
                 </ul>

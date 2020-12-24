@@ -1,6 +1,15 @@
 .card {
     padding: 3rem 1.5rem;
+    border-radius: 4px;
 
+    .rank-up {
+        color: #239B56;
+    }
+ 
+    .rank-down {
+        color: #E74C3C;
+    }
+    
     .card-btn-1 {
         display: flex;
         flex-direction: row;

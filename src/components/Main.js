@@ -2,7 +2,54 @@ import React, { Component } from 'react'
 import Navbar from './Navbar'
 
 import { ProgressBar } from 'react-bootstrap'
+import {
+    LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
+  } from 'recharts';
 
+const footfall = [
+    {
+      name: 'FootFall A', uv: 4000, pv: 2400, amt: 2400,
+    },
+    {
+      name: 'FootFall B', uv: 3000, pv: 1398, amt: 2210,
+    },
+    {
+      name: 'FootFall C', uv: 2000, pv: 9800, amt: 2290,
+    },
+    {
+      name: 'FootFall D', uv: 2780, pv: 3908, amt: 2000,
+    },
+];
+
+const patientsatisfaction = [
+    {
+      name: 'PatientSatisfaction A', uv: 4000, pv: 1398, amt: 2210,
+    },
+    {
+      name: 'PatientSatisfaction B', uv: 4000, pv: 2400, amt: 2400,
+    },
+    {
+      name: 'PatientSatisfaction C', uv: 2780, pv: 3908, amt: 2000,
+    },
+    {
+      name: 'PatientSatisfaction D', uv: 4000, pv: 9800, amt: 2290,
+    },
+];
+
+const revenue = [
+    {
+      name: 'Revenue A', uv: 2780, pv: 3908, amt: 2000,
+    },
+    {
+      name: 'Revenue B', uv: 2000, pv: 1800, amt: 2290,
+    },
+    {
+      name: 'Revenue C', uv: 3000, pv: 3000, amt: 3000,
+    },
+    {
+      name: 'Revenue D', uv: 4000, pv: 4000, amt: 4000,
+    },
+];
 class Main extends Component {
     render() {
         return (
@@ -108,26 +155,97 @@ class Main extends Component {
                                 </div>
                             </div>
 
-                            <div className="card mb-3">
+                            <div className="card mb-4">
                                 <h6 className="card-title mb-4">Monitoring Period</h6>
 
                                 <div className="period-card-btns">
-                                    <div class="btn-group card-btn-group mr-4" role="group" aria-label="Basic example">
-                                        <button type="button" class="btn btn-light">Day</button>
-                                        <button type="button" class="btn btn-light">Week</button>
-                                        <button type="button" class="btn btn-light">Month</button>
-                                        <button type="button" class="btn btn-light">Year</button>
+                                    <div className="btn-group card-btn-group mr-4" role="group" aria-label="Basic example">
+                                        <button type="button" className="btn btn-light">Day</button>
+                                        <button type="button" className="btn btn-light">Week</button>
+                                        <button type="button" className="btn btn-light">Month</button>
+                                        <button type="button" className="btn btn-light">Year</button>
                                     </div>
 
                                     <button className="btn btn-light card-btn-3">
-                                        <i class="far fa-calendar mr-3"></i>
+                                        <i className="far fa-calendar mr-3"></i>
                                         <span>10 Dec 2019 - 10 Jan 2020</span>
                                     </button>
                                 </div>
                             </div>
 
+                            <div className="row mb-4">
+                                <div className="col-md-4">
+                                    <div className="card">
+                                        <h5 className="card-title-2 mb-4">Foot fall</h5>
+
+                                        <div className="card-graph-details">
+                                            <div className="card-graph-details__info">
+                                                <h4 className="title">13K</h4>
+                                                <p className="description">patients</p>
+                                                <span className="details rank-up">
+                                                    <i className="fas fa-caret-up mr-2"></i>
+                                                    <p className="my-0">+0,2</p>
+                                                </span>
+                                            </div>
+
+                                            <div className="card-graph-details__graph">
+                                                <LineChart width={150} height={100} data={footfall}>
+                                                    <Line type="monotone" dataKey="pv" stroke="#239B56" strokeWidth={2} />
+                                                </LineChart>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="col-md-4">
+                                    <div className="card">
+                                        <h5 className="card-title-2 mb-4">Patient Satisfaction</h5>
+
+                                        <div className="card-graph-details">
+                                            <div className="card-graph-details__info">
+                                                <h4 className="title">7.8</h4>
+                                                <p className="description">NPS</p>
+                                                <span className=" details rank-down">
+                                                    <i className="fas fa-caret-down mr-2"></i>
+                                                    <p className="my-0">-0,1</p>
+                                                </span>
+                                            </div>
+
+                                            <div className="card-graph-details__graph">
+                                                <LineChart width={150} height={100} data={patientsatisfaction}>
+                                                    <Line type="monotone" dataKey="pv" stroke="#E74C3C" strokeWidth={2} />
+                                                </LineChart>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="col-md-4">
+                                    <div className="card">
+                                        <h5 className="card-title-2 mb-4">Revenue</h5>
+
+                                        <div className="card-graph-details">
+                                            <div className="card-graph-details__info">
+                                                <h4 className="title">4.2m</h4>
+                                                <p className="description">Kenya Shillings</p>
+                                                <span className="details rank-up">
+                                                    <i className="fas fa-caret-up mr-2"></i>
+                                                    <p className="my-0">+2,4</p>
+                                                </span>
+                                            </div>
+
+                                            <div className="card-graph-details__graph">
+                                                <LineChart width={150} height={100} data={revenue}>
+                                                    <Line type="monotone" dataKey="pv" stroke="#239B56" strokeWidth={2} />
+                                                </LineChart>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div className="card">
-                                <table class="table table-borderless analytics-table">
+                                <table className="table table-borderless analytics-table">
                                     <thead>
                                         <tr>
                                             <th scope="col">No</th>
@@ -146,14 +264,14 @@ class Main extends Component {
                                                 <div className="d-flex align-items-center">
                                                     <span className="table-text-primary mr-4">1,3</span>
                                                     <span className="table-text-secondary mr-3">+0,2</span>
-                                                    <i className="fas fa-sort-up rank-up"></i>
+                                                    <i className="fas fa-caret-up rank-up"></i>
                                                 </div>
                                             </td>
                                             <td>
                                                 <div className="d-flex align-items-center">
                                                     <span className="table-text-primary mr-4">1,3</span>
                                                     <span className="table-text-secondary mr-3">+0,2</span>
-                                                    <i className="fas fa-sort-up rank-up"></i>
+                                                    <i className="fas fa-caret-up rank-up"></i>
                                                 </div>
                                             </td>
                                             <td>
@@ -177,14 +295,14 @@ class Main extends Component {
                                                 <div className="d-flex align-items-center">
                                                     <span className="table-text-primary mr-4">1,8</span>
                                                     <span className="table-text-secondary mr-3">+0,4</span>
-                                                    <i className="fas fa-sort-up rank-up"></i>
+                                                    <i className="fas fa-caret-up rank-up"></i>
                                                 </div>
                                             </td>
                                             <td>
                                                 <div className="d-flex align-items-center">
                                                     <span className="table-text-primary mr-4">1,8</span>
                                                     <span className="table-text-secondary mr-3">+0,2</span>
-                                                    <i className="fas fa-sort-up rank-up"></i>
+                                                    <i className="fas fa-caret-up rank-up"></i>
                                                 </div>
                                             </td>
                                             <td>
@@ -237,14 +355,14 @@ class Main extends Component {
                                                 <div className="d-flex align-items-center">
                                                     <span className="table-text-primary mr-4">2,8</span>
                                                     <span className="table-text-secondary mr-3">-0, 5</span>
-                                                    <i className="fas fa-sort-up rank-down"></i>
+                                                    <i className="fas fa-caret-down rank-down"></i>
                                                 </div>
                                             </td>
                                             <td>
                                                 <div className="d-flex align-items-center">
                                                     <span className="table-text-primary mr-4">2,5</span>
                                                     <span className="table-text-secondary mr-3">-2,1</span>
-                                                    <i className="fas fa-sort-down rank-down"></i>
+                                                    <i className="fas fa-caret-down rank-down"></i>
                                                 </div>
                                             </td>
                                             <td>
