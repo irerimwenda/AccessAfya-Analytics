@@ -2,9 +2,7 @@ import React, { Component } from 'react'
 import Navbar from './Navbar'
 
 import { ProgressBar } from 'react-bootstrap'
-import {
-    LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
-  } from 'recharts';
+import { LineChart, Line } from 'recharts'
 
 const footfall = [
     {

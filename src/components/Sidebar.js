@@ -25,7 +25,7 @@ class Sidebar extends Component {
 
                     <li className="link-item">
                         <NavLink className="link" to='#'>
-                            <i className="fas fa-headphones-alt"></i>
+                            <i className="fas fa-briefcase"></i>
                         </NavLink>
                     </li>
                 </ul>
