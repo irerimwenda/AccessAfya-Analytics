@@ -245,7 +245,7 @@ class Main extends Component {
                             </div>
 
                             <div className="card">
-                                <table className="table table-borderless analytics-table">
+                                <table className="table table-borderless table-responsive-sm analytics-table">
                                     <thead>
                                         <tr>
                                             <th scope="col">No</th>

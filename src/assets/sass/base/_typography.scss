@@ -17,6 +17,10 @@ body {
     color: $color-black;
     font-weight: 500;
     margin: 0;
+
+    @include respond(tab-land) {
+        text-align: center;
+    }
 }
 
 .table-text-primary {

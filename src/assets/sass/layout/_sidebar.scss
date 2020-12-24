@@ -4,6 +4,13 @@
     padding: 4rem;
     border-right: 1px solid $grey-light-2;
 
+    @include respond(phone) {
+        width: 100%;
+        border-right: unset;
+        border-bottom: 1px solid $grey-light-2;
+        padding: 1rem 0;
+    }
+
     &__link-menu {
         display: flex;
         flex-direction: column;
@@ -13,10 +20,20 @@
         height: 100%;
         list-style: none;
 
+        @include respond(phone) {
+            flex-direction: row;
+            justify-content: space-around;
+            margin-bottom: unset;
+        }
+
         .link-item {
 
             &:not(:last-child) {
                 margin-bottom: 3rem;
+
+                @include respond(phone) {
+                    margin-bottom: unset;
+                }
             }
 
             .link {

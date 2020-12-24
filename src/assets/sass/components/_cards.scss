@@ -2,12 +2,16 @@
     padding: 3rem 1.5rem;
     border-radius: 4px;
 
+    @include respond(tab-land) {
+        margin-bottom: 2rem;
+    }
+
     .rank-up {
-        color: #239B56;
+        color: $green-1;
     }
  
     .rank-down {
-        color: #E74C3C;
+        color: $red-1;
     }
     
     .card-btn-1 {
@@ -93,11 +97,20 @@
         border: 1px solid $grey-light-2;
         border-radius: 5px;
 
+        @include respond(phone) {
+            margin-right: unset !important;
+            margin-bottom: 1rem;
+        }
+
         .btn-light {
             font-size: 14px;
             padding: 10px 20px;
             background: $color-white;
             color: $grey-dark-2;
+
+            @include respond(tab-port) {
+                padding: 5px 10px;
+            }
 
             &:hover {
                 border: 1px solid  $blue-2;

@@ -1,6 +1,10 @@
 .dashboard {
     display: flex;
     flex-direction: row;
+
+    @include respond(phone) {
+        flex-direction: column;
+    }
 }
 
 .main-wrapper {
@@ -21,8 +25,8 @@
             grid-template-columns: 25% 75%;
             column-gap: 2rem;
 
-            .visits-section {
-
+            @include respond(phone) {
+                grid-template-columns: repeat(1, 1fr);
             }
 
             .breakdown-section {
@@ -31,11 +35,29 @@
                     display: grid;
                     grid-template-columns: repeat(4, 1fr);
                     gap: 10px;
+
+                    @include respond(tab-port) {
+                        grid-template-columns: repeat(3, 1fr);
+                    }
+
+                    @include respond(phone) {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
                 }
 
                 .period-card-btns {
                     display: flex;
                     flex-direction: row; 
+
+                    @include respond(phone) {
+                        flex-direction: column;
+                    }
+
+                    @include respond(phone) {
+                        .btn-light {
+                            padding: 10px;
+                        }
+                    }
                 }
 
                 .card-graph-details {
@@ -43,8 +65,17 @@
                     flex-direction: row;
                     align-items: center;
 
+                    @include respond(tab-land) {
+                        flex-direction: column;
+                    }
+
                     &__info {
                         margin-right: auto;
+
+                        @include respond(tab-land) {
+                            margin-right: unset;
+                            margin-bottom: 2rem;
+                        }
 
                         .title {
                             font-size: 2rem;

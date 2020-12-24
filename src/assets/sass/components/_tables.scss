@@ -23,3 +23,35 @@
        }
    }
 }
+
+@include respond(phone){
+    table { 
+        display:block;
+
+        > *,tr,td,th { 
+            display:block
+        }
+      
+      thead { 
+        display:none
+      }
+
+      tbody tr { 
+        height:auto; 
+        padding:8px 0;
+
+        td { 
+            padding-left:45%; 
+            margin-bottom:12px;
+
+            &:last-child { 
+                margin-bottom:0 
+            }
+        }        
+      }
+
+      tr {
+            border-bottom: 1px solid $grey-light-2;
+        }
+    }
+}
